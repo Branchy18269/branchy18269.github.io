@@ -71,14 +71,14 @@ main {
 
 figure {
     text-align: center;
-    background-color: #fff;
+    background-color: #A62B2B;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
-    background-color: rgb(255, 30, 30);
+    background-color: #000000;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -87,14 +87,14 @@ figure {
 }
 
 .btn:hover {
-    background-color: rgb(225, 65, 65);
+    background-color: #1F1F1F;
 }
 
 figcaption {
     margin-top: 10px;
     font-size: 1rem;
     font-weight: bold;
-    color: #b30000;
+    color: #FFFFFF;
 }
 
 /* Footer */
