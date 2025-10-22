@@ -3,37 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Hyndman</title>
-    <link rel="stylesheet" href="css/stylesh.css">
+    <title>Will Hyndman - IT Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* PRIMARY COLOR: Deep black for body background */
+            background-color: #0d0d0d; 
+        }
+        .hero-bg {
+            /* PRIMARY COLOR: Professional deep black gradient, slightly darker than body */
+            background-color: #000000; 
+            background-image: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Will Hyndman's Personal Portfolio</h1>
-        <nav>
-            <div><a href="index.html">Home</a></div>
-            <div><a href="resume.html">Resume</a></div>
-            <div><a href="samples.html">HTML Projects</a></div>
-            <div><a href="osamples.html">Python Projects</a></div>
-        </nav>
-    </header>
-    <main>
-        <section class="samples-section">
-            <img src="images/will.jpg" alt="Photo of Will Hyndman">
-            <div>
-                <h2>About Me</h2>
-                <p>Hi, I'm Will Hyndman, a student at Nova Scotia Community College in the IT Systems Management and Security program. I'm passionate about technology and am excited to build a career in IT.</p>
-            </div>
-            <div>
-                <p>I&#39;m an enthusiastic and driven professional currently pursuing a Diploma in IT Systems Management and Security at Nova Scotia Community College. With a growing expertise in networking, system administration, and technical support, I&#39;m focused on building a career in IT while leveraging my diverse background in customer service, food safety, and hands-on maintenance.
 
-                I have hands-on experience working as an Information System Technician with the Nova Scotia Health Authority, where I supported IT infrastructure, managed networks, and provided technical support. In addition to my IT work, I&#39;ve developed valuable customer service skills through various roles at McDonald's, Walmart, and The Wendy's Company, where I honed my ability to engage with customers and manage high-pressure situations effectively.
-                
-                Whether it's managing a network, assisting customers, or completing mechanical tasks, I pride myself on being adaptable and dedicated to continuous learning. I&#39;m skilled in Windows Server, Active Directory, Python, HTML, and network administration, and am eager to apply my growing technical expertise in a professional setting.</p>
+    <!-- Navigation Bar (Dark Mode) -->
+    <header class="bg-gray-900 shadow-xl border-b border-red-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <!-- Name color uses primary Red -->
+                    <span class="text-2xl font-extrabold text-red-700 tracking-tight">Will Hyndman</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <!-- Updated Link colors for Dark Mode -->
+                    <a href="#about" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">Experience</a>
+                    <a href="#contact" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">Contact</a>
+                </nav>
+                <!-- CTA button uses primary Red -->
+                <a href="#contact" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-md text-white bg-red-600 hover:bg-red-700 transition duration-300">
+                    Get in Touch
+                </a>
+                <!-- Mobile Menu Button (Light color) -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-red-500 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024-2025 Will Hyndman. All rights reserved. willhyndman.damvan.ca</p>
+        </div>
+        <!-- Mobile Menu (Dark Mode) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Experience</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contact</a>
+                <!-- Mobile CTA button uses primary Red -->
+                <a href="#contact" class="block w-full text-center px-3 py-2 rounded-full text-base font-medium text-white bg-red-600 hover:bg-red-700 mt-2">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Black Primary) -->
+    <section class="hero-bg py-24 sm:py-32" id="home">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Placeholder Image/Avatar - Red accent on Black -->
+            <div class="mb-8 w-32 h-32 mx-auto rounded-full bg-gray-700 border-4 border-white shadow-xl flex items-center justify-center">
+                <span class="text-5xl text-red-500 font-bold">W</span>
+            </div>
+
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4">
+                Will Hyndman
+            </h1>
+            <!-- Tagline uses gray (secondary) for contrast on black -->
+            <p class="text-2xl font-semibold text-gray-300 mb-8">
+                IT Systems Management & Security Student | NSCC | Focused on Networking and Technical Support
+            </p>
+            <div class="flex justify-center space-x-4">
+                <!-- Primary CTA is Red and points to #experience -->
+                <a href="#experience" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-lg text-white bg-red-500 hover:bg-red-600 transition duration-300 transform hover:scale-105" onclick="showMessage('Jumping to experience...')">
+                    View Experience
+                </a>
+                <!-- Secondary CTA: White border, Red hover (keeping primary focus) -->
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-bold rounded-xl text-white hover:bg-red-700 transition duration-300" onclick="showMessage('Ready to chat?')">
+                    Say Hello
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Dark Mode) -->
+    <section class="py-20 sm:py-24 bg-gray-900" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-12">Who I Am</h2>
+            
+            <div class="max-w-4xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6">
+                <p>
+                    Hi, I'm Will Hyndman, an enthusiastic and driven professional currently pursuing a **Diploma in IT Systems Management and Security at Nova Scotia Community College (NSCC)**. I'm passionate about technology and excited to build a career in IT.
+                </p>
+                <p>
+                    With a growing expertise in **networking, system administration, and technical support**, I'm focused on applying my knowledge in a professional setting. I have hands-on experience working as an **Information System Technician with the Nova Scotia Health Authority**, where I supported IT infrastructure, managed networks, and provided technical support.
+                </p>
+                <p>
+                    I leverage a diverse background in **customer service, food safety, and hands-on maintenance** (honed at McDonald's, Walmart, and The Wendy's Company) to effectively engage with customers and manage high-pressure situations. I pride myself on being adaptable and dedicated to continuous learning.
+                </p>
+                
+                <!-- Skills/Tech Stack Grid -->
+                <div class="pt-8">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center">My Core IT & Technical Skills</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <!-- Updated tags for Dark Mode -->
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Windows Server & AD</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Network Administration</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Technical Support</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Python & Scripting</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">IT Infrastructure Support</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Customer Service & Adaptability</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">HTML/Web Basics</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">System Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section (Slightly Lighter Dark Tone) -->
+    <section class="py-20 sm:py-24 bg-gray-800" id="experience">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-white text-center mb-4">Experience & Education</h2>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">A snapshot of my formal education and professional roles.</p>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Education: Nova Scotia Community College (Using Blue accent) -->
+                <div class="relative pl-10">
+                    <!-- Red Timeline Accent -->
+                    <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
+                    <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
+                        <!-- Icon uses Blue accent for education -->
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.41z"/></svg>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white">IT Systems Management & Security Diploma</h3>
+                    <!-- Blue accent color adjusted for dark mode contrast -->
+                    <p class="text-xl font-semibold text-blue-400 mb-2">Nova Scotia Community College (NSCC)</p>
+                    <p class="text-gray-400 mb-4">Expected Graduation: [Year] | [City/Campus]</p>
+                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                        <li>Gaining expertise in network infrastructure, ethical hacking, and advanced system security protocols.</li>
+                        <li>Focused coursework includes Windows Server, Linux, network design, and database management.</li>
+                    </ul>
+                </div>
+
+                <!-- Work: Nova Scotia Health Authority (Using Red accent) -->
+                <div class="relative pl-10">
+                    <!-- Red Timeline Accent -->
+                    <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
+                    <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
+                        <!-- Icon uses Red accent for job role -->
+                        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9-2h2v2h-2V4zm7 16H4V8h16v12zM9 10h6c.55 0 1 .45 1 1s-.45 1-1 1H9c-.55 0-1-.45-1-1s.45-1 1-1z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Information System Technician</h3>
+                    <p class="text-xl font-semibold text-gray-300 mb-2">Nova Scotia Health Authority</p>
+                    <p class="text-gray-400 mb-4">[Date Range, e.g., May 2023 - Aug 2023] | [Location]</p>
+                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                        <li>Provided high-level technical support for essential healthcare IT infrastructure, ensuring 99.9% uptime.</li>
+                        <li>Assisted in network management tasks, including troubleshooting connectivity and configuring endpoints.</li>
+                        <li>Managed and deployed system updates and security patches across a wide range of devices.</li>
+                    </ul>
+                </div>
+
+                <!-- Other Experience: Customer Service Roles -->
+                <div class="relative pl-10">
+                    <!-- Red Timeline Accent -->
+                    <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
+                    <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
+                        <!-- User Icon (General roles) -->
+                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Diverse Customer Service & Operations Roles</h3>
+                    <p class="text-xl font-semibold text-gray-300 mb-2">McDonald's, Walmart, The Wendy's Company</p>
+                    <p class="text-gray-400 mb-4">[Date Range, e.g., 2018 - 2023] | Multiple Locations</p>
+                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
+                        <li>Honed critical customer engagement skills, managing high-volume and high-pressure situations effectively.</li>
+                        <li>Developed a strong sense of adaptability and efficiency in diverse operational environments.</li>
+                        <li>Applied organizational and technical maintenance skills to ensure smooth daily operations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Black Primary - Already dark) -->
+    <section class="py-20 sm:py-24 hero-bg" id="contact">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-white mb-4">Let's Connect.</h2>
+            <p class="text-xl text-gray-300 mb-10">
+                I am currently open to new opportunities and collaborations. Get in touch!
+            </p>
+            
+            <!-- Contact form remains white for high contrast focus -->
+            <div class="bg-white p-8 sm:p-12 rounded-2xl shadow-2xl text-left">
+                <form onsubmit="event.preventDefault(); showMessage('Message sent! I will be in touch soon.');">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <!-- Input focus rings use primary Red -->
+                            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-red-500 focus:border-red-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <!-- Input focus rings use primary Red -->
+                            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-red-500 focus:border-red-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <!-- Input focus rings use primary Red -->
+                            <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-xl focus:ring-red-500 focus:border-red-500"></textarea>
+                        </div>
+                        <!-- Contact Button is primary Red -->
+                        <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-xl shadow-sm text-white bg-red-500 hover:bg-red-600 transition duration-300 transform hover:scale-[1.01]">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Black Primary - Already dark) -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <p class="text-sm">&copy; 2025 Will Hyndman. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <!-- Social Icons Hover use primary Red -->
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition duration-300" onclick="showMessage('LinkedIn Profile Link')">
+                        <!-- LinkedIn Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.528-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition duration-300" onclick="showMessage('GitHub Profile Link')">
+                        <!-- GitHub Icon -->
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.372 0 0 5.372 0 12c0 5.303 3.438 9.8 8.207 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.72-4.04-1.61-4.04-1.61-.546-1.387-1.332-1.756-1.332-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.493 1.006.108-.78.418-1.305.762-1.605-2.665-.3-5.465-1.332-5.465-5.93 0-1.31.468-2.38.125-3.21.365-1.07.035-2.008.36-2.316 0 0 .976-.32 3.204 1.23a11.1 11.1 0 013-.404c1.01.076 2.015.13 3 .404 2.228-1.55 3.203-1.23 3.203-1.23.325.308.01.214.365 2.316.48 1.02.126 1.895.126 3.21 0 4.61-2.8 5.62-5.47 5.92-.42.36-.82 1.07-.82 2.164 0 1.6.01 3.29.015 3.73 0 .317.22.687.82.577 4.766-1.585 8.203-6.082 8.203-11.385C24 5.372 18.628 0 12 0z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <!-- Simple Message Box for non-alert feedback (Red) -->
+    <div id="message-box" class="fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+        <!-- Message content here -->
+    </div>
+
+    <!-- JavaScript for Mobile Menu and Message Box -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const messageBox = document.getElementById('message-box');
+
+        // Toggle mobile menu visibility
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Function to show custom message box (instead of alert)
+        function showMessage(message) {
+            messageBox.textContent = message;
+            messageBox.classList.remove('opacity-0', 'pointer-events-none');
+            messageBox.classList.add('opacity-100');
+
+            setTimeout(() => {
+                messageBox.classList.remove('opacity-100');
+                messageBox.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        }
+    </script>
 </body>
 </html>
