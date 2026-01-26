@@ -5,22 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will Hyndman - IT Portfolio</title>
     
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Load Font Awesome for logos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Custom font import */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         
         body {
             font-family: 'Inter', sans-serif;
-            /* REVERTED: Back to original dark background */
             background-color: #0d0d0d; 
         }
         .hero-bg {
-            /* REVERTED: Back to original black gradient overlay */
             background-color: #000000; 
             background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.65) 0%, rgba(26, 26, 26, 0.65) 100%), url('https://www.avantgardewheels.com/wp-content/uploads/2021/07/audi-b8-s4-m520r-dark-graphite-metallic-avant-garde-wheels-04.jpg');
             background-size: cover;
@@ -28,27 +24,22 @@
         }
     </style>
 </head>
-<body class="text-gray-300"> <!-- REVERTED: Back to default gray text -->
+<body class="text-gray-300">
 
-    <!-- REVERTED: Navigation Bar back to original colors -->
     <header class="bg-gray-900 shadow-xl border-b border-red-700 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <!-- REVERTED: Name color -->
                     <span class="text-2xl font-extrabold text-red-700 tracking-tight">Will Hyndman</span>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <!-- REVERTED: Link colors -->
                     <a href="#about" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">About</a>
                     <a href="#experience" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">Experience</a>
                     <a href="#contact" class="text-gray-300 hover:text-red-500 font-medium transition duration-300">Contact</a>
                 </nav>
-                <!-- REVERTED: CTA button -->
                 <a href="#contact" class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-full shadow-md text-white bg-red-600 hover:bg-red-700 transition duration-300">
                     Get in Touch
                 </a>
-                <!-- REVERTED: Mobile Menu Button color -->
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-red-500 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,23 +49,19 @@
                 </div>
             </div>
         </div>
-        <!-- REVERTED: Mobile Menu colors -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900 shadow-xl">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">About</a>
                 <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Experience</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contact</a>
-                <!-- REVERTED: Mobile CTA button -->
                 <a href="#contact" class="block w-full text-center px-3 py-2 rounded-full text-base font-medium text-white bg-red-600 hover:bg-red-700 mt-2">Get in Touch</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-bg py-24 sm:py-32" id="home">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <!-- Path to your photo -->
             <img src="images/6ecd663c-593a-4bbc-a6fe-a1c7a7a88182photo.jpeg" alt="Photo of Will Hyndman" class="mb-8 w-32 h-32 mx-auto rounded-full border-4 border-white shadow-xl object-cover">
 
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4">
@@ -84,11 +71,9 @@
                 IT Systems Management & Security Student | NSCC | Focused on Networking and Technical Support
             </p>
             <div class="flex justify-center space-x-4">
-                <!-- REVERTED: Primary CTA -->
                 <a href="#experience" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-lg text-white bg-red-500 hover:bg-red-600 transition duration-300 transform hover:scale-105" onclick="showMessage('Jumping to experience...')">
                     View Experience
                 </a>
-                <!-- REVERTED: Secondary CTA -->
                 <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-bold rounded-xl text-white hover:bg-red-700 hover:border-red-700 transition duration-300" onclick="showMessage('Ready to chat?')">
                     Say Hello
                 </a>
@@ -96,33 +81,30 @@
         </div>
     </section>
 
-    <!-- REVERTED: About Section colors -->
     <section class="py-20 sm:py-24 bg-gray-900" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-white text-center mb-12">Who I Am</h2>
             
             <div class="max-w-4xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6">
                 <p>
-                    Hi, I'm Will Hyndman, an enthusiastic and driven professional currently pursuing a <strong>Diploma in IT Systems Management and Security at Nova Scotia Community College (NSCC)</strong>. I'm passionate about technology and excited to build a career in IT.
+                    Hi, I'm Will Hyndman, an enthusiastic and driven professional currently pursuing a <strong>Diploma in IT Systems Management and Security at Nova Scotia Community College (NSCC)</strong>. I'm passionate about technology and committed to building a career in IT by leveraging strong technical skills in Windows Server and network administration.
                 </p>
                 <p>
-                    With a growing expertise in <strong>networking, system administration, and technical support</strong>, I'm focused on applying my knowledge in a professional setting. I have hands-on experience working as an <strong>Information System Technician with the Nova Scotia Health Authority</strong>, where I supported IT infrastructure, managed networks, and provided technical support.
+                    With growing expertise in <strong>system administration and technical support</strong>, I have hands-on experience working as an <strong>Information System Technician with the Nova Scotia Health Authority</strong>, where I managed network resources and provided essential technical support.
                 </p>
                 <p>
-                    I leverage a diverse background in <strong>customer service, food safety, and hands-on maintenance</strong> (honed at McDonald's, Walmart, and The Wendy's Company) to effectively engage with customers and manage high-pressure situations. I pride myself on being adaptable and dedicated to continuous learning.
+                    I combine my technical knowledge with a history of hard work, efficiency, and <strong>exceptional customer service</strong>. My background in high-volume environments has honed my ability to communicate effectively, lead teams, and solve problems under pressure.
                 </p>
                 
-                <!-- Skills/Tech Stack Grid -->
                 <div class="pt-8">
                     <h3 class="text-2xl font-bold text-white mb-6 text-center">My Core IT & Technical Skills</h3>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-                        <!-- REVERTED: Tags colors -->
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Windows Server & AD</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Network Administration</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Technical Support</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Python & Scripting</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">IT Infrastructure Support</span>
-                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Customer Service & Adaptability</span>
+                        <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Customer Service</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">Virtualization (Hyper-V/VMware)</span>
                         <span class="py-3 px-4 bg-gray-800 text-gray-200 rounded-full font-semibold shadow-md">System Management</span>
                     </div>
@@ -131,39 +113,33 @@
         </div>
     </section>
 
-    <!-- REVERTED: Experience Section colors -->
     <section class="py-20 sm:py-24 bg-gray-800" id="experience">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-white text-center mb-4">Experience & Education</h2>
-            <p class="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">A snapshot of my formal education and professional roles, ordered by relevance and recency.</p>
+            <p class="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">A snapshot of my formal education and professional roles.</p>
 
             <div class="max-w-4xl mx-auto space-y-12">
-                <!-- 1. Education: Nova Scotia Community College (NSCC) -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.41z"/></svg>
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.41z"/></svg>
                     </div>
                     
                     <h3 class="text-2xl font-bold text-white">IT Systems Management & Security Diploma</h3>
-                    <p class="text-xl font-semibold text-blue-400 mb-2"> <!-- Kept blue for education differentiation -->
+                    <p class="text-xl font-semibold text-blue-400 mb-2">
                         <a href="https://www.nscc.ca/" target="_blank" rel="noopener noreferrer" class="hover:underline">Nova Scotia Community College (NSCC)</a>
                     </p>
                     <p class="text-gray-400 mb-4"><strong>Expected Graduation: June 2026</strong> | Truro Campus, NS</p>
                     <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Gaining expertise in network infrastructure, ethical hacking, and advanced system security protocols.</li>
+                        <li>Gaining expertise in network infrastructure, system security protocols, and server administration.</li>
                         <li>Focused coursework includes Windows Server, Linux, network design, and database management.</li>
                     </ul>
                 </div>
                 
-                <!-- 2. Work: Nova Scotia Health Authority (Technical/IT Role) -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <!-- REVERTED: Icon color -->
-                        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9-2h2v2h-2V4zm7 16H4V8h16v12zM9 10h6c.55 0 1 .45 1 1s-.45 1-1 1H9c-.55 0-1-.45-1-1s.45-1 1-1z"/></svg>
+                        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9-2h2v2h-2V4zm7 16H4V8h16v12zM9 10h6c.55 0 1 .45 1 1s-.45 1-1 1H9c-.55 0-1-.45-1-1s.45-1 1-1z"/></svg>
                     </div>
                     <h3 class="text-2xl font-bold text-white">Information System Technician (Work Placement)</h3>
                     <p class="text-xl font-semibold text-gray-300 mb-2">
@@ -171,52 +147,49 @@
                     </p>
                     <p class="text-gray-400 mb-4">Apr 2024 – Jun 2024 | Kings, NS</p>
                     <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Managed network resources via <strong>Active Directory</strong>, ensuring secure and efficient operations.</li>
-                        <li>Installed software and configured devices to support organizational needs and staff productivity.</li>
+                        <li>Managed network resources and user accounts via <strong>Active Directory</strong>, ensuring secure access and operational efficiency.</li>
+                        <li>Configured and deployed hardware devices to support organizational needs.</li>
+                        <li>Installed and successfully troubleshot essential software packages for staff.</li>
                     </ul>
                 </div>
                 
-                <!-- 3. Work: McDonald's Canada (Current Role) -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Team Member</h3>
+                    <h3 class="text-2xl font-bold text-white">Food Service Team Member</h3>
                     <p class="text-xl font-semibold text-gray-300 mb-2">
-                        <a href="https://www.mcdonalds.com/ca/en-ca.html" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-red-500">McDonald's Canada</a>
+                        McDonald's Canada & The Wendy's Company
                     </p>
-                    <p class="text-gray-400 mb-4">Nov 2024 – Present | Valley, NS</p>
+                    <p class="text-gray-400 mb-4">Aug 2021 – Present | Valley & Coldbrook, NS</p>
                     <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Resolved customer concerns with professionalism and a positive attitude to ensure satisfaction.</li>
-                        <li>Supported team members across various operational areas, ensuring smooth service delivery.</li>
+                        <li><strong>Customer Service Excellence:</strong> Demonstrated a hard-working and efficient attitude in high-volume environments.</li>
+                        <li><strong>Operational Support:</strong> Collaborated with team members to optimize workflows and maintain strict sanitation standards.</li>
+                        <li><strong>Customer Engagement:</strong> Fostered a welcoming atmosphere at McDonald's, occasionally using vocal performance (singing) to entertain guests and improve their dining experience.</li>
                     </ul>
                 </div>
 
-                <!-- 4. Work: WMB Holdings Ltd. -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Shop Employee</h3>
+                    <h3 class="text-2xl font-bold text-white">Casual Shop Helper/Washer</h3>
                     <p class="text-xl font-semibold text-gray-300 mb-2">
                         <a href="https://www.wmbholdings.ca/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-red-500">WMB Holdings Ltd.</a>
                     </p>
                     <p class="text-gray-400 mb-4">July 2024 – July 2025 | Truro, NS</p>
                     <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Assisted with daily operations, providing excellent customer service and maintaining organization.</li>
+                        <li>Assisted with daily shop operations and logistics, maintaining a safe and organized workspace.</li>
+                        <li>Performed equipment washing and maintenance tasks, ensuring fleet vehicles were clean and road-ready.</li>
                     </ul>
                 </div>
 
-                <!-- 5. Work: Walmart Canada -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                     </div>
                     <h3 class="text-2xl font-bold text-white">Stock Unloader Associate</h3>
                     <p class="text-xl font-semibold text-gray-300 mb-2">
@@ -224,199 +197,90 @@
                     </p>
                     <p class="text-gray-400 mb-4">June 2024 – Nov 2024 | Truro, NS</p>
                     <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Unloaded and managed freight efficiently, ensuring products were stocked on shelves promptly.</li>
-                        <li>Collaborated with colleagues to optimize workflows and meet operational deadlines.</li>
+                        <li>Managed freight logistics and inventory stocking to ensure product availability and sales floor readiness.</li>
                     </ul>
                 </div>
 
-                <!-- 6. Education: Central Kings Rural High School -->
                 <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
                     <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
                     <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.41z"/></svg>
+                        <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8-1.41-1.41z"/></svg>
                     </div>
                     <h3 class="text-2xl font-bold text-white">High School Diploma</h3>
                     <p class="text-xl font-semibold text-blue-400 mb-2">
-                        <!-- Link provided by user -->
                         <a href="https://sites.google.com/gnspes.ca/ckrhs" target="_blank" rel="noopener noreferrer" class="hover:underline">Central Kings Rural High School</a>
                     </p>
                     <p class="text-gray-400 mb-4">Graduated June 2024 | Cambridge, NS</p>
-                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Successfully completed high school education, preparing for post-secondary studies.</li>
-                    </ul>
-                </div>
-                
-                <!-- 7. Work: The Wendy's Company -->
-                <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
-                    <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
-                    <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Team Member</h3>
-                    <p class="text-xl font-semibold text-gray-300 mb-2">
-                        <a href="https://www.wendys.com/en-ca" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-red-500">The Wendy's Company</a>
-                    </p>
-                    <p class="text-gray-400 mb-4">Aug 2021 – Apr 2024 | Coldbrook, NS</p>
-                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Delivered exceptional customer service and maintained a clean and welcoming environment.</li>
-                    </ul>
-                </div>
-
-                <!-- 8. Work: Eassons Transport Ltd. -->
-                <div class="relative pl-10">
-                    <!-- REVERTED: Timeline Accent -->
-                    <div class="absolute left-0 top-0 h-full w-1 bg-red-500 rounded-full"></div>
-                    <div class="absolute left-[-16px] top-0 h-8 w-8 bg-gray-900 border-4 border-red-500 rounded-full shadow-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white">Landscaper</h3>
-                    <p class="text-xl font-semibold text-gray-300 mb-2">
-                        <a href="https://eassons.com/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-red-500">Eassons Transport Ltd.</a>
-                    </p>
-                    <p class="text-gray-400 mb-4">May 2020 – Jul 2021 | Kentville, NS</p>
-                    <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                        <li>Operated equipment and performed lawn maintenance to enhance property aesthetics.</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="py-20 sm:py-24 hero-bg" id="contact">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-extrabold text-white mb-4">Let's Connect.</h2>
             <p class="text-xl text-gray-300 mb-10">
-                I am currently open to new opportunities and collaborations. Get in touch directly via email at 
-                <!-- REVERTED: Link color -->
-                <a href="mailto:email@willhyndman.ca" class="text-red-500 hover:text-red-400 font-semibold">email@willhyndman.ca</a> 
-                or phone at 
-                <!-- REVERTED: Link color -->
-                <a href="tel:9026921732" class="text-red-500 hover:text-red-400 font-semibold">(902) 692-1732</a>.
+                I am currently looking for opportunities in IT Systems Management and Security.
             </p>
             
-            <!-- UPDATED: Contact form with dark theme -->
-            <div class="bg-gray-900 text-gray-300 p-8 sm:p-12 rounded-2xl shadow-2xl text-left">
-                
-                <form id="contact-form" method="POST" action="https://formspree.io/f/YOUR_UNIQUE_ID">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                            <!-- UPDATED: Input for dark theme -->
-                            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-700 bg-gray-800 text-gray-200 rounded-xl focus:ring-red-500 focus:border-red-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                            <!-- UPDATED: Input for dark theme -->
-                            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-700 bg-gray-800 text-gray-200 rounded-xl focus:ring-red-500 focus:border-red-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                            <!-- UPDATED: Input for dark theme -->
-                            <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-700 bg-gray-800 text-gray-200 rounded-xl focus:ring-red-500 focus:border-red-500"></textarea>
-                        </div>
-                        <!-- Contact Button (already dark-theme compatible) -->
-                        <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-xl shadow-sm text-white bg-red-500 hover:bg-red-600 transition duration-3All-in-all, 300 transform hover:scale-[1.01]">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+            <div class="bg-gray-900 text-gray-300 p-8 sm:p-12 rounded-2xl shadow-2xl text-center">
+                <a href="mailto:willh@willhyndman.ca" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300">
+                    <i class="fa-solid fa-envelope mr-3"></i> Email Me Directly
+                </a>
+                <p class="mt-6 text-gray-400">
+                    <span class="block">Or call: <a href="tel:9026921732" class="text-white hover:text-red-500 font-semibold">(902) 692-1732</a></span>
+                    <span class="block mt-2">Email: willh@willhyndman.ca</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- REVERTED: Footer colors -->
     <footer class="bg-gray-900 text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Social and Gaming Profiles -->
             <div class="mb-8 text-center border-b border-gray-700 pb-8">
-                <h3 class="text-xl font-bold text-white mb-4">Social & Gaming Profiles</h3>
+                <h3 class="text-xl font-bold text-white mb-4">Professional Profiles</h3>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-y-6 max-w-2xl mx-auto">
+                <div class="flex justify-center space-x-12 max-w-2xl mx-auto">
                     
-                    <!-- REVERTED: Hover color -->
-                    <a href="https://www.instagram.com/will.a.hyndman/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-1 text-gray-300 hover:text-red-500 transition duration-300">
-                        <i class="fa-brands fa-instagram text-2xl text-pink-500"></i>
-                        <span class="text-xs text-gray-500">Instagram</span>
-                        <span class="font-semibold text-sm">@will.a.hyndman</span>
-                    </a>
-
-                    <!-- REVERTED: Hover color -->
-                    <a href="https://www.facebook.com/will.a.hyndman" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-1 text-gray-300 hover:text-red-500 transition duration-300">
-                        <i class="fa-brands fa-facebook text-2xl text-blue-600"></i>
-                        <span class="text-xs text-gray-500">Facebook</span>
-                        <span class="font-semibold text-sm">@will.a.hyndman</span>
-                    </a>
-
-                    <!-- REVERTED: Hover color -->
-                    <a href="https://www.snapchat.com/add/branchy18269" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center space-y-1 text-gray-300 hover:text-red-500 transition duration-300">
-                        <i class="fa-brands fa-snapchat text-2xl text-yellow-400"></i>
-                        <span class="text-xs text-gray-500">Snapchat</span>
-                        <span class="font-semibold text-sm">branchy18269</span>
-                    </a>
-
-                    <!-- Discord -->
                     <div class="flex flex-col items-center space-y-1">
-                        <i class="fa-brands fa-discord text-2xl text-blue-400"></i>
-                        <span class="text-xs text-gray-500">Discord</span>
-                        <span class="text-gray-300 font-semibold text-sm">branchy18269</span>
-                    </div>
-
-                    <!-- Xbox -->
-                    <div class="flex flex-col items-center space-y-1">
-                        <i class="fa-brands fa-xbox text-2xl text-green-500"></i>
-                        <span class="text-xs text-gray-500">Xbox/PSN/Steam</span>
-                        <span class="text-gray-300 font-semibold text-sm">Branchy18269</span>
-                    </div>
-                    
-                    <!-- GitHub -->
-                    <div class="flex flex-col items-center space-y-1">
-                        <!-- REVERTED: Icon color -->
                         <a href="https://github.com/Branchy18269/" target="_blank" rel="noopener noreferrer" class="text-red-500 hover:text-red-400 transition duration-300">
-                            <i class="fa-brands fa-github text-2xl"></i>
+                            <i class="fa-brands fa-github text-3xl"></i>
                         </a>
-                        <span class="text-xs text-gray-500">GitHub Link</span>
-                        <a href="https://github.com/Branchy18269/" target="_blank" rel="noopener noreferrer" class="text-gray-300 font-semibold text-sm hover:text-red-500">Link</a>
+                        <span class="text-xs text-gray-500 mt-2">GitHub</span>
+                    </div>
+
+                    <div class="flex flex-col items-center space-y-1">
+                        <a href="https://www.linkedin.com/in/will-hyndman-947b59307/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-400 transition duration-300">
+                            <i class="fa-brands fa-linkedin text-3xl"></i>
+                        </a>
+                        <span class="text-xs text-gray-500 mt-2">LinkedIn</span>
                     </div>
                     
                 </div>
             </div>
 
-            <!-- Professional Links & Copyright -->
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-4">
                 <p class="text-sm">&copy; 2025 Will Hyndman. All rights reserved.</p>
                 <div class="flex space-x-6">
-                    <!-- REVERTED: Hover color -->
                     <a href="tel:9026921732" class="text-gray-400 hover:text-red-500 transition duration-300" title="Phone: (902) 692-1732">
                         <i class="fa-solid fa-phone fa-lg"></i>
                     </a>
-                    <!-- REVERTED: Hover color -->
-                    <a href="https://www.linkedin.com/in/will-hyndman-947b59307/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition duration-300" title="LinkedIn Profile">
-                        <i class="fa-brands fa-linkedin fa-lg"></i>
-                    </a>
-                    <!-- REVERTED: Hover color -->
-                    <a href="http://damvan.ca" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-500 transition duration-300" title="Personal Project Site: damvan.ca">
-                        <i class="fa-solid fa-globe fa-lg"></i>
+                    <a href="mailto:willh@willhyndman.ca" class="text-gray-400 hover:text-red-500 transition duration-300" title="Email Me">
+                        <i class="fa-solid fa-envelope fa-lg"></i>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- REVERTED: Simple Message Box color -->
     <div id="message-box" class="fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
-        <!-- Message content here -->
-    </div>
+        </div>
 
-    <!-- JavaScript for Mobile Menu and Message Box -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const messageBox = document.getElementById('message-box');
-        const contactForm = document.getElementById('contact-form');
 
         // Toggle mobile menu visibility
         mobileMenuBtn.addEventListener('click', () => {
@@ -430,7 +294,7 @@
             });
         });
 
-        // Function to show custom message box (instead of alert)
+        // Function to show custom message box
         function showMessage(message) {
             messageBox.textContent = message;
             messageBox.classList.remove('opacity-0', 'pointer-events-none');
@@ -440,53 +304,6 @@
                 messageBox.classList.remove('opacity-100');
                 messageBox.classList.add('opacity-0', 'pointer-events-none');
             }, 3000);
-        }
-
-        // --- JavaScript for functional form submission ---
-        if (contactForm) {
-            contactForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Stop the default browser submission
-                
-                const form = event.target;
-                const data = new FormData(form);
-                
-                // Added check to ensure Formspree URL is set up
-                if (form.action.endsWith('YOUR_UNIQUE_ID')) {
-                    showMessage('Form not set up! Please update the Formspree URL in index.html.');
-                    return;
-                }
-
-                // Use the existing showMessage function to give feedback
-                showMessage('Sending message...');
-
-                fetch(form.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json' // Tells Formspree to send a JSON response
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        // Success
-                        showMessage('Message sent! I will be in touch soon.');
-                        form.reset(); // Clear the form fields
-                    } else {
-                        // Server-side error
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                // Display Formspree-specific errors
-                                showMessage(data["errors"].map(error => error["message"]).join(", "));
-                            } else {
-                                // Generic server error
-                                showMessage('Oops! There was a problem sending your message.');
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    // Network error
-                    showMessage('Oops! There was a problem connecting to the server.');
-                });
-            });
         }
     </script>
 </body>
