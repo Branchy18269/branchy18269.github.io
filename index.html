@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Hyndman | IT Systems & Security</title>
+    <title>Will Hyndman | IT Systems &amp; Security</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/Capture.PNG">
-    <!-- Optional: Add high-res PNG favicons if you have them -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> -->
-    <!-- <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"> -->
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,9 +24,9 @@
                     },
                     colors: {
                         brand: {
-                            500: '#ef4444', // Red 500
-                            600: '#dc2626', // Red 600
-                            accent: '#ff8a8a', // Light Red for glow/accents
+                            500: '#ef4444', 
+                            600: '#dc2626', 
+                            accent: '#ff8a8a', 
                         }
                     }
                 }
@@ -43,40 +35,47 @@
     </script>
     
     <style>
+        /* ===== BASE STYLES ===== */
         body { 
-            background-color: #09090b; /* Zinc 950 */ 
+            background-color: #09090b; 
             overflow-x: hidden;
         }
-        
-        /* Glassmorphism Navigation */
+
+        /* ===== COLOR SYSTEM ===== */
+        :root {
+            --color-brand-primary: #ef4444;
+            --color-brand-secondary: #dc2626;
+            --color-brand-accent: #ff8a8a;
+            --color-bg-dark: #09090b;
+            --color-bg-card: #18181b;
+            --color-border-subtle: rgba(255, 255, 255, 0.05);
+            --color-border-normal: rgba(255, 255, 255, 0.1);
+            --color-border-emphasis: rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===== GLASS MORPHISM ===== */
         .glass-nav {
             background: rgba(9, 9, 11, 0.6);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid var(--color-border-subtle);
             transition: all 0.3s ease;
         }
+
         .glass-nav.scrolled {
             background: rgba(9, 9, 11, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--color-border-normal);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* Gradient Text */
+        /* ===== TEXT EFFECTS ===== */
         .gradient-text {
-            background: linear-gradient(135deg, #ff8a8a 0%, #dc2626 100%);
+            background: linear-gradient(135deg, var(--color-brand-accent) 0%, var(--color-brand-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Tech Grid Background */
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        /* Ambient Hero Glow */
+        /* ===== BACKGROUNDS & GLOWS ===== */
         .hero-glow {
             position: absolute;
             width: 800px;
@@ -89,15 +88,18 @@
             pointer-events: none;
         }
 
-        /* Original Background Image restored with a modern dark overlay */
-        .hero-bg {
-            background-color: #09090b; 
-            background-image: linear-gradient(135deg, rgba(9, 9, 11, 0.85) 0%, rgba(9, 9, 11, 0.98) 100%), url('images/Gemini_Generated_Image_w6bnv7w6bnv7w6bn.png');
-            background-size: cover;
-            background-position: center;
+        .card-glow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 128px;
+            height: 128px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+            border-radius: 9999px;
+            filter: blur(3rem);
         }
 
-        /* Timeline Styling - Reverted to left-aligned like original */
+        /* ===== TIMELINE ===== */
         .timeline-line::before {
             content: '';
             position: absolute;
@@ -105,61 +107,176 @@
             bottom: 0;
             left: 19px;
             width: 2px;
-            background: linear-gradient(to bottom, transparent, rgba(239,68,68,0.3), transparent);
+            background: linear-gradient(to bottom, transparent, rgba(239, 68, 68, 0.3), transparent);
+        }
+
+        /* ===== CARDS & CONTAINERS ===== */
+        .card-base {
+            background: rgba(24, 24, 27, 0.5);
+            border: 1px solid var(--color-border-subtle);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            border-color: var(--color-border-normal);
+            background: rgba(24, 24, 27, 0.8);
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.05);
+        }
+
+        /* ===== PORTFOLIO IMAGES ===== */
+        .portfolio-image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; 
+            overflow: hidden;
+            border-radius: 0.75rem;
+            border: 1px solid var(--color-border-normal);
+            margin-bottom: 1.5rem;
+            background-color: var(--color-bg-card);
+        }
+        
+        .portfolio-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            object-position: center;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover .portfolio-image {
+            transform: scale(1.05);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            background-color: var(--color-brand-secondary);
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-brand-primary);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* ===== BADGES & TAGS ===== */
+        .badge-brand {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: rgba(255, 138, 138, 1);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-neutral {
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 9999px;
+            background: rgba(113, 113, 122, 0.5);
+            border: 1px solid rgba(113, 113, 122, 0.3);
+            color: rgb(228, 228, 231);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ===== ICON CONTAINERS ===== */
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: var(--color-brand-accent);
+            flex-shrink: 0;
+        }
+
+        .icon-box-lg {
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.875rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 8px rgba(255, 138, 138, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 12px rgba(255, 138, 138, 1);
+            }
+        }
+
+        .pulse-brand {
+            animation: pulse-glow 2s ease-in-out infinite;
         }
     </style>
 </head>
 <body class="text-zinc-400 antialiased selection:bg-brand-500 selection:text-white relative">
 
-    <!-- Navigation -->
-    <header id="navbar" class="glass-nav fixed w-full top-0 z-50">
+    <header id="navbar" class="glass-nav fixed w-full top-0 z-50 scrolled">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0">
                     <a href="#home" class="text-2xl font-bold tracking-tighter text-white hover:text-brand-accent transition duration-300">WH<span class="text-brand-accent">.</span></a>
                 </div>
                 
-                <!-- Desktop Nav -->
                 <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">About</a>
-                    <a href="#projects" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Projects</a>
+                    <a href="#projects" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Portfolio</a>
+                    <a href="#certifications" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Certifications</a>
                     <a href="#experience" class="text-sm font-medium text-zinc-300 hover:text-white transition-colors">Experience</a>
                     <a href="#contact" class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white text-sm font-medium transition-all hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]">
                         Get in Touch
                     </a>
                 </nav>
 
-                <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden text-zinc-300 hover:text-white focus:outline-none p-2 rounded-lg bg-white/5 border border-white/10">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         
-        <!-- Mobile Nav Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-b border-white/10 absolute w-full shadow-2xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="#about" class="block px-4 py-3 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-white transition duration-300">About</a>
-                <a href="#projects" class="block px-4 py-3 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-white transition duration-300">Projects</a>
+                <a href="#projects" class="block px-4 py-3 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-white transition duration-300">Portfolio</a>
+                <a href="#certifications" class="block px-4 py-3 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-white transition duration-300">Certifications</a>
                 <a href="#experience" class="block px-4 py-3 rounded-lg text-base font-medium text-zinc-300 hover:bg-white/5 hover:text-white transition duration-300">Experience</a>
                 <a href="#contact" class="block px-4 py-3 mt-4 text-center rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-500 transition duration-300">Get in Touch</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="home">
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden" id="home">
         <div class="hero-glow"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <!-- Original Image Restored -->
             <div class="relative inline-block mb-8">
                 <div class="absolute inset-0 bg-gradient-to-tr from-brand-500 to-brand-accent rounded-full blur-md opacity-70"></div>
                 <img src="images/6ecd663c-593a-4bbc-a6fe-a1c7a7a88182photo.jpeg" alt="Will Hyndman" class="relative w-32 h-32 mx-auto rounded-full border border-white/20 shadow-2xl object-cover" onerror="this.src='https://ui-avatars.com/api/?name=WH&background=18181b&color=ef4444'">
             </div>
 
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-sm font-medium text-brand-400 mb-6 backdrop-blur-sm">
-                <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse shadow-[0_0_8px_rgba(255,138,138,0.8)]"></span>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-sm font-medium text-brand-accent mb-6 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-accent pulse-brand"></span>
                 Available for IT Opportunities
             </div>
             
@@ -167,21 +284,17 @@
                 Hi, I'm <span class="gradient-text">Will Hyndman</span>
             </h1>
             <p class="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                IT Systems Management & Security Student bridging the gap between hardware infrastructure, secure networks, and robust server environments.
+                IT Systems Management & Security Student bridging the gap between hardware infrastructure, secure enterprise networks, and dedicated end-user support.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projects" onclick="showMessage('Navigating to Projects...')" class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl text-white bg-brand-600 hover:bg-brand-500 font-semibold transition-all shadow-[0_0_20px_rgba(239,68,68,0.3)] hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] transform hover:-translate-y-1">
-                    View My Work <i class="fa-solid fa-arrow-down ml-2"></i>
-                </a>
-                <a href="#contact" onclick="showMessage('Opening Contact section...')" class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl text-white bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition-all backdrop-blur-sm transform hover:-translate-y-1">
-                    Say Hello
+                <a href="#projects" class="btn-primary">
+                    View My Portfolio <i class="fa-solid fa-arrow-down ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- About & Skills Section -->
     <section class="py-24 bg-zinc-900/40 border-y border-white/5 relative" id="about">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -189,101 +302,191 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Building robust systems, <br><span class="text-brand-400">one server at a time.</span></h2>
                     <div class="space-y-5 text-zinc-400 leading-relaxed text-lg">
                         <p>
-                            Currently pursuing my Diploma in IT Systems Management and Security at NSCC, I specialize in architecting, deploying, and securing enterprise networks.
+                            I’m an enthusiastic and driven professional currently pursuing my Diploma in IT Systems Management and Security at the Nova Scotia Community College (NSCC). With a growing expertise in networking, system administration, and technical support, I am focused on building a career in IT while leveraging my diverse background in customer service and hands-on maintenance.
                         </p>
                         <p>
-                            With hands-on experience at the Nova Scotia Health Authority, I combine a deeply logical approach to problem-solving with exceptional customer service skills. Whether it's configuring Windows Server, managing Active Directory, or troubleshooting network hardware, I ensure IT infrastructure is done right.
+                            <strong>My Career Goals:</strong> I am aiming to become a versatile Systems Administrator and Help Desk Technician, specifically within enterprise environments like the Nova Scotia Health Authority. Whether it's managing a network, assisting customers, or deploying hardware, I pride myself on being adaptable and dedicated to continuous learning. 
+                        </p>
+                        <p>
+                            Ultimately, this constant drive to build and support feeds into my long-term ambition: continuing to grow my own IT enterprise, Done Right Tech Company.
                         </p>
                     </div>
                 </div>
                 
-                <div class="bg-zinc-950/80 p-8 rounded-2xl border border-white/5 shadow-2xl backdrop-blur-sm relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl group-hover:bg-brand-accent/20 transition-all duration-500"></div>
+                <div class="bg-zinc-950/80 p-8 rounded-2xl border border-white/5 shadow-2xl backdrop-blur-sm relative overflow-hidden group card-hover">
+                    <div class="card-glow"></div>
                     <h3 class="text-xl font-bold text-white mb-6 flex items-center">
                         <i class="fa-solid fa-microchip text-brand-accent mr-3"></i> Technical Arsenal
                     </h3>
                     <div class="flex flex-wrap gap-3 relative z-10">
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Windows Server & AD</span>
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Network Admin</span>
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Technical Support</span>
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Virtualization (Hyper-V)</span>
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Python Scripting</span>
-                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium hover:border-brand-500 transition-colors cursor-default shadow-sm">Hardware Configuration</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Active Directory</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Windows Server 2022</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Computer Networking (Unifi/Cisco)</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Python & HTML</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Virtualization (Proxmox/ESXi)</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Technical Support & Hardware</span>
+                        <span class="px-4 py-2 rounded-lg bg-zinc-900 text-zinc-200 border border-white/10 text-sm font-medium">Customer Service Excellence</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="py-24 relative" id="projects">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Work & Ventures</h2>
-                <p class="text-lg text-zinc-400 max-w-2xl mx-auto">Highlighting academic capstones and entrepreneurial consulting initiatives.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Learning Portfolio Artifacts</h2>
+                <p class="text-lg text-zinc-400 max-w-3xl mx-auto">A showcase of the infrastructure and network designs I have built, demonstrating how my NSCC education directly translates to employer benefits.</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project Card 1 -->
-                <div class="group bg-zinc-900/50 border border-white/5 rounded-2xl p-8 hover:bg-zinc-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.1)] relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 to-brand-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                    <div class="w-14 h-14 bg-brand-500/10 text-brand-400 rounded-xl flex items-center justify-center mb-6 text-2xl border border-brand-500/20 shadow-inner">
-                        <i class="fa-solid fa-server"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.1)] relative overflow-hidden flex flex-col">
+                    <div class="portfolio-image-container">
+                        <img src="images/placeholder-dkwo.jpg" alt="DKWO Capstone Network Layout" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800'">
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3">DKWO Capstone Project</h3>
-                    <p class="text-zinc-400 mb-6 leading-relaxed">
-                        Serving as Project Manager for the deployment of a hybrid enterprise network. The infrastructure leverages Windows Server 2025 and professional networking hardware to create a secure, scalable organizational environment.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-semibold text-brand-300 bg-brand-500/20 border border-brand-500/30 px-3 py-1 rounded-full">Windows Server 2025</span>
-                        <span class="text-xs font-semibold text-brand-300 bg-brand-500/20 border border-brand-500/30 px-3 py-1 rounded-full">Enterprise Networking</span>
-                        <span class="text-xs font-semibold text-brand-300 bg-brand-500/20 border border-brand-500/30 px-3 py-1 rounded-full">Project Management</span>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">DKWO Enterprise Capstone</h3>
+                        <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                            <strong>The Project:</strong> Operating as a completely separate entity from my personal business, I designed and deployed a scalable enterprise infrastructure for a simulated company using Unifi networking equipment and a multi-tier Active Directory environment.
+                        </p>
+                        <p class="text-zinc-300 mb-6 text-sm leading-relaxed border-l-2 border-brand-500 pl-3">
+                            <strong>Employer Benefit:</strong> Demonstrates my ability to safely segment and route complex networks. In environments like healthcare, this ensures organizational and patient data remains secure and highly available across different departments.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="badge-brand">Windows Server 2022</span>
+                        <span class="badge-brand">Unifi Networking</span>
                     </div>
                 </div>
 
-                <!-- Project Card 2 -->
-                <div class="group bg-zinc-900/50 border border-white/5 rounded-2xl p-8 hover:bg-zinc-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.1)] relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                    <div class="w-14 h-14 bg-brand-accent/10 text-brand-accent rounded-xl flex items-center justify-center mb-6 text-2xl border border-brand-accent/20 shadow-inner">
-                        <i class="fa-solid fa-building-shield"></i>
+                <div class="group bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.1)] relative overflow-hidden flex flex-col">
+                    <div class="portfolio-image-container">
+                        <img src="https://donerighttech.ca/images/DRTC-Logo.png" alt="Done Right Tech Company Logo" class="portfolio-image" style="object-fit: contain; padding: 2rem; background-color: #09090b;">
                     </div>
-                    <h3 class="text-2xl font-bold text-white mb-3"><a href="https://donerighttech.ca/" target="_blank" class="hover:text-brand-400 transition-colors">Done Right Tech Company <i class="fa-solid fa-arrow-up-right-from-square text-sm ml-2"></i></a></h3>
-                    <p class="text-zinc-400 mb-6 leading-relaxed">
-                        Founder of DRTC, an IT consulting initiative focused on delivering reliable technical solutions, system administration, and infrastructure management directly to business clients.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs font-semibold text-red-300 bg-red-500/20 border border-red-500/30 px-3 py-1 rounded-full">IT Consulting</span>
-                        <span class="text-xs font-semibold text-red-300 bg-red-500/20 border border-red-500/30 px-3 py-1 rounded-full">System Admin</span>
-                        <span class="text-xs font-semibold text-red-300 bg-red-500/20 border border-red-500/30 px-3 py-1 rounded-full">Entrepreneurship</span>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Done Right Tech Company</h3>
+                        <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                            <strong>The Project:</strong> Architected the internal production network for my own IT business. Built on a Windows Server 2022 platform utilizing a single domain controller (drtc.net) with secure remote access integration via Twingate.
+                        </p>
+                        <p class="text-zinc-300 mb-6 text-sm leading-relaxed border-l-2 border-brand-500 pl-3">
+                            <strong>Employer Benefit:</strong> Proves I can independently deploy, secure, and troubleshoot a live business network from the ground up. This translates directly to reliable, proactive system administration for future employers.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="badge-brand">System Admin</span>
+                        <span class="badge-brand">Active Directory</span>
                     </div>
                 </div>
+
+                <div class="group bg-zinc-900/50 border border-white/5 rounded-2xl p-6 hover:bg-zinc-800/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(239,68,68,0.1)] relative overflow-hidden flex flex-col">
+                    <div class="portfolio-image-container">
+                        <img src="images/placeholder-homelab.jpg" alt="Proxmox Homelab Dashboard" class="portfolio-image" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-white mb-3">Advanced Virtualization Lab</h3>
+                        <p class="text-zinc-400 mb-4 text-sm leading-relaxed">
+                            <strong>The Project:</strong> A dedicated testing environment utilizing Type-1 hypervisors (Proxmox/ESXi) to experiment with diverse open-source Linux and Windows server environments.
+                        </p>
+                        <p class="text-zinc-300 mb-6 text-sm leading-relaxed border-l-2 border-brand-500 pl-3">
+                            <strong>Employer Benefit:</strong> Technology evolves constantly. My homelab is proof that I am a self-starter. When an employer introduces new software, I already have the proven ability to independently research, deploy, and master it.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="badge-brand">Proxmox / ESXi</span>
+                        <span class="badge-brand">Linux & Open Source</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Experience Timeline -->
+    <section class="py-24 bg-zinc-900/40 border-t border-white/5 relative" id="certifications">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-10">Licenses & Certifications</h2>
+            
+            <div class="bg-zinc-900/80 border border-white/10 p-6 sm:p-8 rounded-2xl shadow-xl backdrop-blur-md relative overflow-hidden text-left group hover:border-brand-500/50 transition-colors mb-8">
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 bg-[#00a4ef]/10 text-[#00a4ef] rounded-xl flex items-center justify-center flex-shrink-0 border border-[#00a4ef]/20">
+                        <i class="fa-brands fa-microsoft text-3xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Microsoft Certified: Azure Administrator Associate (AZ-104)</h3>
+                        <p class="text-brand-400 font-medium mb-3">In Progress - Self-Guided Coursework</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            Actively pursuing certification to validate expertise in implementing, managing, and monitoring an organization's Microsoft Azure environment, including virtual networks, storage, compute, identity, security, and governance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                
+                <div class="bg-zinc-900/50 border border-white/5 p-6 rounded-2xl shadow-lg hover:border-white/20 transition-colors flex items-start gap-4 card-hover">
+                    <div class="icon-box border-blue-500/20 bg-blue-500/10 text-blue-400">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Cyber Security Awareness</h3>
+                        <p class="text-zinc-400 text-sm">Nova Scotia Health Authority (NSHA)</p>
+                        <p class="text-zinc-500 text-xs mt-1">Issued Jun 2024</p>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900/50 border border-white/5 p-6 rounded-2xl shadow-lg hover:border-white/20 transition-colors flex items-start gap-4 card-hover">
+                    <div class="icon-box border-amber-500/20 bg-amber-500/10 text-amber-400">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">WHMIS</h3>
+                        <p class="text-zinc-400 text-sm">Nova Scotia Community College (NSCC)</p>
+                        <p class="text-zinc-500 text-xs mt-1">Issued Sept 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section class="py-24 bg-zinc-900/30 border-t border-white/5" id="experience">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Experience & Education</h2>
-                <p class="text-lg text-zinc-400">A snapshot of my formal education and professional roles.</p>
+                <p class="text-lg text-zinc-400">A complete history of my formal education, IT consulting, and customer service roles.</p>
             </div>
 
             <div class="relative timeline-line space-y-12 pl-2">
                 
-                <!-- Timeline Item 1 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-brand-500 bg-zinc-950 text-brand-accent flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.4)] z-10">
-                        <i class="fa-solid fa-graduation-cap text-sm"></i>
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-500/30 transition-colors shadow-lg">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-white text-xl">Chief Executive Officer</h3>
+                                <h4 class="text-zinc-400 font-medium">Done Right Tech Company</h4>
+                            </div>
+                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">Jan 2026 – Present</span>
+                        </div>
+                        <ul class="list-disc pl-4 text-sm text-zinc-300 space-y-2 marker:text-brand-500 mt-4">
+                            <li>Leading an IT consulting initiative focused on delivering reliable technical solutions, system administration, and infrastructure management directly to business clients.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 group">
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
+                    </div>
                     <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-500/30 transition-colors shadow-lg">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
                                 <h3 class="font-bold text-white text-xl">IT Systems Management & Security Diploma</h3>
-                                <h4 class="text-zinc-400 font-medium"><a href="https://www.nscc.ca/" target="_blank" class="hover:text-brand-400 transition-colors">Nova Scotia Community College (NSCC)</a></h4>
+                                <h4 class="text-zinc-400 font-medium">Nova Scotia Community College (NSCC)</h4>
                             </div>
-                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">Expected June 2026</span>
+                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">Sept 2024 – May 2026</span>
                         </div>
                         <ul class="list-disc pl-4 text-sm text-zinc-300 space-y-2 marker:text-brand-500 mt-4">
                             <li>Gaining expertise in network infrastructure, system security protocols, and server administration.</li>
@@ -292,110 +495,127 @@
                     </div>
                 </div>
 
-                <!-- Timeline Item 2 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-red-500 group-hover:text-red-400 transition-colors">
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
                         <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-red-500/30 transition-colors shadow-lg">
+                    <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-500/30 transition-colors shadow-lg">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
-                                <h3 class="font-bold text-white text-xl">Information System Technician</h3>
+                                <h3 class="font-bold text-white text-xl">Information System Technician (Co-op)</h3>
                                 <h4 class="text-zinc-400 font-medium">Nova Scotia Health Authority</h4>
                             </div>
-                            <span class="text-sm font-bold text-red-400 mt-2 md:mt-0 whitespace-nowrap">Apr 2024 – Jun 2024</span>
+                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">Apr 2024 – Jun 2024</span>
                         </div>
-                        <ul class="list-disc pl-4 text-sm text-zinc-300 space-y-2 marker:text-red-500 mt-4">
-                            <li>Managed network resources and user accounts via Active Directory securely.</li>
-                            <li>Configured and deployed hardware devices to support organization needs.</li>
-                            <li>Installed and troubleshot essential software packages for clinical staff.</li>
+                        <ul class="list-disc pl-4 text-sm text-zinc-300 space-y-2 marker:text-brand-500 mt-4">
+                            <li>Worked as a Co-op Student under several different technicians, helping manage the network securely via Active Directory.</li>
+                            <li>Installed new software on client machines for medical work and configured new devices for incoming personnel.</li>
+                            <li>Replaced legacy machines with new hardware, executing the majority of the work with a high degree of independence.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 3 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/10 bg-zinc-950 text-zinc-400 flex items-center justify-center z-10 group-hover:border-white/30 transition-colors">
-                        <i class="fa-solid fa-burger text-sm"></i>
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
-                    <div class="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors shadow-lg">
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
-                                <h3 class="font-bold text-white text-xl">Food Service Team Member</h3>
-                                <h4 class="text-zinc-400 font-medium">McDonald's Canada (Two Locations) & The Wendy's Company</h4>
+                                <h3 class="font-bold text-white text-xl">Crew Member</h3>
+                                <h4 class="text-zinc-400 font-medium">McDonald's (Valley, NS)</h4>
                             </div>
-                            <span class="text-sm font-bold text-zinc-400 mt-2 md:mt-0 whitespace-nowrap">Aug 2021 – March 2026</span>
+                            <span class="text-sm font-bold text-zinc-500 mt-2 md:mt-0 whitespace-nowrap">Nov 2024 – Mar 2026</span>
                         </div>
-                        <ul class="list-disc pl-4 text-sm text-zinc-300 space-y-2 marker:text-zinc-500 mt-4">
-                            <li><strong>The "Singing McDonald's Guy":</strong> Fostered a welcoming and memorable atmosphere across multiple McDonald's locations, frequently using vocal performance to entertain guests.</li>
-                            <li><strong>Customer Service Excellence:</strong> Demonstrated a hard-working and efficient attitude in high-volume environments.</li>
-                            <li><strong>Operational Support:</strong> Collaborated with team members to optimize workflows and maintain strict sanitation standards.</li>
+                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-2">
+                            <li>Demonstrated a hard-working and efficient attitude in high-volume environments, critical for developing Help Desk empathy and managing high-pressure situations.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 4 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/10 bg-zinc-950 text-zinc-400 flex items-center justify-center z-10 group-hover:border-white/30 transition-colors">
-                        <i class="fa-solid fa-wrench text-sm"></i>
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
-                    <div class="p-6 rounded-2xl bg-transparent border border-white/5">
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
-                                <h3 class="font-bold text-white text-xl">Casual Shop Helper/Washer</h3>
+                                <h3 class="font-bold text-white text-xl">Shop Employee</h3>
                                 <h4 class="text-zinc-400 font-medium">WMB Holdings Ltd.</h4>
                             </div>
-                            <span class="text-sm font-bold text-zinc-400 mt-2 md:mt-0 whitespace-nowrap">July 2024 – July 2025</span>
+                            <span class="text-sm font-bold text-zinc-500 mt-2 md:mt-0 whitespace-nowrap">Jul 2024 – Jul 2025</span>
                         </div>
-                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-4">
-                            <li>Worked alongside experienced technicians to assist in the repair of trucks and trailers.</li>
-                            <li>Assisted with daily shop operations and logistics, maintaining a safe workspace.</li>
-                            <li>Performed equipment washing and maintenance tasks for fleet vehicles.</li>
+                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-2">
+                            <li>Worked alongside experienced technicians to assist in the repair of trucks and trailers, highlighting adaptability and mechanical aptitude.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 5 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/10 bg-zinc-950 text-zinc-400 flex items-center justify-center z-10 group-hover:border-white/30 transition-colors">
-                        <i class="fa-solid fa-boxes-stacked text-sm"></i>
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
-                    <div class="p-6 rounded-2xl bg-transparent border border-white/5">
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
                                 <h3 class="font-bold text-white text-xl">Stock Unloader Associate</h3>
                                 <h4 class="text-zinc-400 font-medium">Walmart Canada</h4>
                             </div>
-                            <span class="text-sm font-bold text-zinc-400 mt-2 md:mt-0 whitespace-nowrap">June 2024 – Nov 2024</span>
+                            <span class="text-sm font-bold text-zinc-500 mt-2 md:mt-0 whitespace-nowrap">Jun 2024 – Nov 2024</span>
                         </div>
-                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-4">
+                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-2">
                             <li>Managed logistics for receiving, efficiently unloading trucks and stocking freight.</li>
-                            <li>Operated Pallet Jacks and other equipment to ensure product availability and sales floor readiness.</li>
-                            <li>Entrusted with properly securing and managing "high ticket" inventory items.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Timeline Item 6 -->
                 <div class="relative pl-12 group">
-                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-brand-500 bg-zinc-950 text-brand-accent flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.4)] z-10">
-                        <i class="fa-solid fa-school text-sm"></i>
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
                     </div>
-                    
-                    <div class="p-6 rounded-2xl bg-transparent border border-white/5">
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-white text-xl">Fast Food Team Member</h3>
+                                <h4 class="text-zinc-400 font-medium">The Wendy's Company</h4>
+                            </div>
+                            <span class="text-sm font-bold text-zinc-500 mt-2 md:mt-0 whitespace-nowrap">Aug 2021 – Apr 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 group">
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="font-bold text-white text-xl">Landscaper</h3>
+                                <h4 class="text-zinc-400 font-medium">Eassons Transport Ltd.</h4>
+                            </div>
+                            <span class="text-sm font-bold text-zinc-500 mt-2 md:mt-0 whitespace-nowrap">May 2020 – Jul 2021</span>
+                        </div>
+                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-zinc-600 mt-2">
+                            <li>Worked independently on maintaining the lawns across various properties, ensuring a keen eye for detail.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 group">
+                    <div class="absolute left-0 top-1 w-10 h-10 rounded-full border-2 border-white/20 bg-zinc-950 text-zinc-300 flex items-center justify-center z-10 group-hover:border-brand-500 group-hover:text-brand-accent transition-colors">
+                        <i class="fa-solid fa-network-wired text-sm"></i>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-transparent border border-white/5 hover:bg-white/5 transition-colors">
                         <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                             <div>
                                 <h3 class="font-bold text-white text-xl">High School Diploma</h3>
                                 <h4 class="text-zinc-400 font-medium">Central Kings Rural High School</h4>
                             </div>
-                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">Graduated June 2024</span>
+                            <span class="text-sm font-bold text-brand-400 mt-2 md:mt-0 whitespace-nowrap">2020 – 2024</span>
                         </div>
-                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-brand-500 mt-4">
-                            <li><strong>Relevant Coursework:</strong> Entrepreneurship, Business Technology, Computer Programming, Multimedia, Film & Video, and Wood Workshop.</li>
+                        <ul class="list-disc pl-4 text-sm text-zinc-400 space-y-2 marker:text-brand-500 mt-2">
+                            <li><strong>Relevant Coursework:</strong> Entrepreneurship, Business Technology, Computer Programming, Multimedia, Film &amp; Video, and Wood Workshop.</li>
                         </ul>
                     </div>
                 </div>
@@ -404,20 +624,19 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="py-24 relative overflow-hidden" id="contact">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-900/10 pointer-events-none"></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Let's Connect.</h2>
             <p class="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-                Currently looking for opportunities in IT Systems Management and Security. Whether you have a position or just want to chat networking, my inbox is open.
+                I am actively seeking roles where I can bring my blend of Help Desk empathy and Systems Administration expertise to an organization. Thank you for viewing my portfolio.
             </p>
-            <p>Please do not email me reguarding my Websites Design.</p>
+            <p class="text-sm mb-6 text-zinc-500">Please do not email me regarding my Website's Design.</p>
             
             <div class="bg-zinc-900/80 border border-white/10 p-8 sm:p-12 rounded-3xl shadow-2xl backdrop-blur-md max-w-2xl mx-auto relative overflow-hidden">
                 <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand-500/20 rounded-full blur-3xl"></div>
                 
-                <a href="mailto:willh@willhyndman.ca" class="inline-flex items-center justify-center px-8 py-4 w-full sm:w-auto rounded-xl text-white bg-brand-600 hover:bg-brand-500 font-bold text-lg transition-all shadow-[0_0_15px_rgba(239,68,68,0.4)] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)] group mb-6 z-10 relative">
+                <a href="mailto:will.a.hyndman@gmail.com" class="btn-primary w-full sm:w-auto text-base mb-6 z-10 relative">
                     <i class="fa-solid fa-envelope mr-3 group-hover:-translate-y-1 transition-transform"></i> Email Me Directly
                 </a>
                 
@@ -429,66 +648,46 @@
                         (902) 692-1732
                     </a>
                     <span class="hidden sm:block w-1 h-1 rounded-full bg-zinc-600"></span>
-                    <a href="mailto:willh@willhyndman.ca" class="hover:text-brand-400 transition-colors flex items-center group">
+                    <a href="mailto:will.a.hyndman@gmail.com" class="hover:text-brand-400 transition-colors flex items-center group">
                         <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mr-3 group-hover:bg-brand-500/20 transition-colors">
                             <i class="fa-solid fa-at"></i>
                         </div>
-                        willh@willhyndman.ca
+                        will.a.hyndman@gmail.com
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-zinc-950 border-t border-white/5 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                
                 <div class="text-2xl font-bold tracking-tighter text-white">
                     WH<span class="text-brand-accent">.</span>
                 </div>
-                
                 <div class="flex space-x-6">
                     <a href="https://github.com/Branchy18269/" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors transform hover:scale-110" title="GitHub">
-                        <span class="sr-only">GitHub</span>
                         <i class="fa-brands fa-github text-2xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/will-hyndman-947b59307/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-[#0A66C2] transition-colors transform hover:scale-110" title="LinkedIn">
-                        <span class="sr-only">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/will-hyndman/" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-[#0A66C2] transition-colors transform hover:scale-110" title="LinkedIn">
                         <i class="fa-brands fa-linkedin text-2xl"></i>
                     </a>
                 </div>
-
-                <p class="text-zinc-600 text-sm">
-                    &copy; 2026 Will Hyndman. All rights reserved.
-                </p>
-                <div>
+                <div class="text-center md:text-right">
+                    <p class="text-zinc-600 text-sm mb-1">© 2026 Will Hyndman. All rights reserved.</p>
                     <p class="text-zinc-600 text-sm">
-                        <a href="https://donerighttech.ca/">Site Maintained by Done Right Tech Company</a>
+                        <a href="https://donerighttech.ca/" class="hover:text-zinc-400">Site Maintained by Done Right Tech Company</a>
                     </p>
                 </div>
-
             </div>
         </div>
     </footer>
 
-    <!-- Toast Message Box -->
-    <div id="message-box" class="fixed bottom-6 right-6 bg-zinc-800 border border-brand-500/30 text-white px-6 py-4 rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none z-50 flex items-center gap-3 backdrop-blur-md">
-        <i class="fa-solid fa-circle-check text-brand-400"></i>
-        <span id="message-text" class="font-medium text-sm"></span>
-    </div>
-
-    <!-- Scripts -->
     <script>
-        // DOM Elements
         const navbar = document.getElementById('navbar');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const messageBox = document.getElementById('message-box');
-        const messageText = document.getElementById('message-text');
 
-        // Sticky Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 navbar.classList.add('scrolled');
@@ -497,32 +696,15 @@
             }
         });
 
-        // Mobile Menu Toggle
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Hide mobile menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
-
-        // Custom Toast Message Function
-        function showMessage(message) {
-            messageText.textContent = message;
-            
-            // Show the toast
-            messageBox.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-            messageBox.classList.add('opacity-100', 'translate-y-0');
-
-            // Hide after 3 seconds
-            setTimeout(() => {
-                messageBox.classList.remove('opacity-100', 'translate-y-0');
-                messageBox.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-            }, 3000);
-        }
     </script>
 </body>
 </html>
